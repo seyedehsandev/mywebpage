@@ -1,19 +1,21 @@
 import React from 'react';
 
-function ProjectCard({ title, desc, img }) {
+function ProjectCard({ title, desc, img , sourceLink , liveLink}) {
   return (
     <div className="max-w-sm bg-white border border-gray-300 rounded-lg shadow-lg transform transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 dark:bg-gray-900 dark:border-gray-800">
-      <a href="#">
-        <img className="rounded-t-lg w-full object-cover h-48 transition-transform duration-300 transform hover:scale-105" src={img} />
+      <a href={liveLink} target="_blank" rel="noopener noreferrer">
+        <img className="rounded-t-lg w-full object-cover h-48 transition-transform duration-300 transform hover:scale-105" src={img} alt={title} />
       </a>
       <div className="p-5">
-        <a href="#">
+        <a href={liveLink} target="_blank" rel="noopener noreferrer">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
         </a>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{desc}</p>
         <div className="flex gap-x-3 items-center justify-center">
           <a
-            href="#"
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-500 transition duration-300"
           >
             See Live
@@ -33,8 +35,10 @@ function ProjectCard({ title, desc, img }) {
               />
             </svg>
           </a>
-          <button
-            type="button"
+          <a
+            href={sourceLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-md text-sm px-4 py-2 inline-flex items-center transition duration-300"
           >
             <svg
@@ -51,7 +55,7 @@ function ProjectCard({ title, desc, img }) {
               />
             </svg>
             Source Code
-          </button>
+          </a>
         </div>
       </div>
     </div>
