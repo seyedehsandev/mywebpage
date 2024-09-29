@@ -6,7 +6,7 @@ function Footer() {
         <div>
         <ul className="flex gap-x-5 p-2 items-center text-xl">
         <Link  href={"/"}  >Home </Link>
-        <Link  href={"/porjects"} >My Projects</Link>
+        <Link  href={"/projects"} >My Projects</Link>
         <Link  href={"/about"} >About Me</Link>
         </ul>    
         </div>
