@@ -1,22 +1,30 @@
 import React from 'react';
 
-function ProjectCard({ title, desc, img , sourceLink , liveLink}) {
+function ProjectCard({ title, desc, img, sourceLink, liveLink }) {
   return (
-    <div className="max-w-sm bg-white border border-gray-300 rounded-lg shadow-lg transform transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 dark:bg-gray-900 dark:border-gray-800">
+    <div className="max-w-sm w-full bg-white border border-gray-300 rounded-lg shadow-lg transform transition-transform hover:-translate-y-2 hover:shadow-2xl duration-300 dark:bg-gray-900 dark:border-gray-800 md:max-w-md lg:max-w-lg">
       <a href={liveLink} target="_blank" rel="noopener noreferrer">
-        <img className="rounded-t-lg w-full object-cover h-48 transition-transform duration-300 transform hover:scale-105" src={img} alt={title} />
+        <img
+          className="rounded-t-lg w-full object-cover h-48 transition-transform duration-300 transform hover:scale-105 md:h-64 lg:h-72"
+          src={img}
+          alt={title}
+        />
       </a>
-      <div className="p-5">
+      <div className="p-4 md:p-6 lg:p-8">
         <a href={liveLink} target="_blank" rel="noopener noreferrer">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+          <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white md:text-2xl lg:text-3xl">
+            {title}
+          </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{desc}</p>
-        <div className="flex gap-x-3 items-center justify-center">
+        <p className="mb-4 text-sm text-gray-700 dark:text-gray-400 md:text-base lg:text-lg">
+          {desc}
+        </p>
+        <div className="flex flex-col gap-3 items-center justify-center sm:flex-row">
           <a
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-500 transition duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-500 transition duration-300"
           >
             See Live
             <svg
@@ -39,7 +47,7 @@ function ProjectCard({ title, desc, img , sourceLink , liveLink}) {
             href={sourceLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-md text-sm px-4 py-2 inline-flex items-center transition duration-300"
+            className="w-full sm:w-auto text-white bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-500 font-medium rounded-md text-sm px-4 py-2 inline-flex items-center justify-center transition duration-300"
           >
             <svg
               className="w-4 h-4 mr-2"
