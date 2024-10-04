@@ -9,7 +9,7 @@ function Navbar() {
   let path = usePathname()
   console.log(path)
   return (
-    <nav className={`flex justify-between p-5 md:px-10 w-dvw items-center`}>
+    <nav className={`flex justify-between p-5 md:px-10 w-full items-center`}>
             {/* Logo  */}
               <Link href={"/"}  className="p-3">
               <Image src={"/2.jpg"} width={30} height={60} alt="Logo"/>
