@@ -41,7 +41,7 @@ const DownloadButton = () => (
 
 export default function About() {
   return (
-    <section className="h-fit bg-white p-4 sm:p-8 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <section className="h-fit bg-white p-4 sm:p-8 text-gray-800 dark:bg-black dark:text-gray-200">
       <div className="mx-auto max-w-4xl">
         <h1 className="mb-4 sm:mb-8 text-center text-2xl sm:text-4xl font-bold">About Me</h1>
         <div className="mb-4 sm:mb-8 text-center text-base sm:text-lg leading-relaxed">

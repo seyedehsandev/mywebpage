@@ -17,13 +17,13 @@ function Navbar() {
               {/* Navbar in Laptop Screen  */}
         <ul className="hidden md:flex gap-x-5 p-2 items-center text-xl">
           <li>
-            <Link className={path == "/" ? "text-black bg-white rounded-lg p-2 hover:bg-slate-100" : "hover:text-black hover:bg-white p-2 rounded-lg transition-colors"} href={"/"}>Home</Link>
+            <Link className={path == "/" ? "menu-link-active  rounded-lg p-2 " : " p-2 rounded-lg menu-link"} href={"/"}>Home</Link>
           </li>
           <li>
-            <Link className={path == "/projects" ? "text-black bg-white rounded-lg p-2 hover:bg-slate-100" : "hover:text-black hover:bg-white p-2 rounded-lg"} href={"/projects"}>My Projects</Link>
+            <Link className={path == "/projects" ? "menu-link-active rounded-lg p-2 " : " p-2 rounded-lg menu-link"} href={"/projects"}>My Projects</Link>
           </li>
           <li>
-            <Link className={path == "/about" ? "text-black bg-white rounded-lg p-2 hover:bg-slate-100" : "hover:text-black hover:bg-white p-2 rounded-lg"} href={"/about"}>About Me</Link>
+            <Link className={path == "/about" ? "menu-link-active  rounded-lg p-2 " : "p-2 rounded-lg menu-link"} href={"/about"}>About Me</Link>
           </li>
         </ul>
 

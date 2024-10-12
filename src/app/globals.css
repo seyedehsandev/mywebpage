@@ -31,3 +31,45 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .menu-link {
+    @apply relative transition-all duration-500 ease-in-out;
+  }
+
+  .menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: #aaa;
+    transition: all 0.5s;
+  }
+
+  .menu-link:hover::after {
+    width: 100%;
+  }
+
+  .menu-link:hover {
+    color: #555;
+  }
+
+  /* استایل حالت اکتیو */
+  .menu-link-active {
+    @apply bg-gray-300 text-black;
+  }
+
+  .menu-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px; /* خط ضخیم‌تر */
+    background-color: #555; /* رنگ متفاوت */
+  }
+}
