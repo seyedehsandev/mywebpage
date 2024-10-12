@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Kalam , Cabin } from "next/font/google";
 import Typing from "./components/Typing";
 import Hero from "./components/Hero";
-import DownloadCV from "./components/DownloadCV";
 
 const cobin = Cabin({subsets:["latin"]})
 const kalam = Kalam({subsets:["latin"] , weight:["400"]})
